@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chaya Galaxy – Advertising Agency</title>
+  <meta name="description" content="Chaya Galaxy is a full-service advertising agency offering branding, media buying, digital marketing, PR, and more." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <!-- Logo -->
+    <a href="#" class="nav-logo" onclick="showPage('home')">
+      <div class="logo-icon">CG</div>
+      <div class="logo-text">
+        <span class="logo-name">Chaya Galaxy</span>
+        <span class="logo-sub">Advertising Agency</span>
+      </div>
+    </a>
+
+    <!-- Menu -->
+    <ul class="nav-menu" id="navMenu">
+      <li class="nav-item">
+        <a href="#" class="nav-link active" onclick="showPage('home'); setActive(this)">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link" onclick="showPage('agency'); setActive(this)">
+          Agency <span class="arrow">▾</span>
+        </a>
+        <div class="dropdown">
+          <div class="dropdown-section-title">Advertising</div>
+          <a href="#" onclick="showPage('agency'); scrollToSection('adv-advertising')">Print</a>
+          <a href="#" onclick="showPage('agency'); scrollToSection('adv-advertising')">Television</a>
+          <a href="#" onclick="showPage('agency'); scrollToSection('adv-advertising')">Radio</a>
+          <a href="#" onclick="showPage('agency'); scrollToSection('adv-advertising')">Digital</a>
+          <a href="#" onclick="showPage('agency'); scrollToSection('adv-advertising')">Outdoor</a>
+          <hr/>
+          <div class="dropdown-section-title">Marketing</div>
+          <a href="#" onclick="showPage('agency'); scrollToSection('adv-marketing')">Market Research</a>
+          <a href="#" onclick="showPage('agency'); scrollToSection('adv-marketing')">Rural Marketing</a>
+          <a href="#" onclick="showPage('agency'); scrollToSection('adv-marketing')">Digital Marketing</a>
+          <hr/>
+          <div class="dropdown-section-title">Creative</div>
+          <a href="#" onclick="showPage('agency'); scrollToSection('adv-creative')">Designing</a>
+          <a href="#" onclick="showPage('agency'); scrollToSection('adv-creative')">Printing</a>
+          <a href="#" onclick="showPage('agency'); scrollToSection('adv-creative')">Copy Translation</a>
+          <hr/>
+          <div class="dropdown-section-title">Events & PR</div>
+          <a href="#" onclick="showPage('agency'); scrollToSection('adv-events')">Corporate Events</a>
+          <a href="#" onclick="showPage('agency'); scrollToSection('adv-events')">Public Relations</a>
+          <a href="#" onclick="showPage('agency'); scrollToSection('adv-events')">Press Meet</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link" onclick="showPage('clients'); setActive(this)">Clients</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link" onclick="showPage('portfolio'); setActive(this)">Portfolio</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link" onclick="showPage('careers'); setActive(this)">Careers</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link" onclick="showPage('contact'); setActive(this)">Contact</a>
+      </li>
+    </ul>
+
+    <a href="#" class="btn btn-primary nav-cta" onclick="showPage('contact')">Get a Quote</a>
+
+    <div class="nav-toggle" id="navToggle" onclick="toggleMobileMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PAGE: HOME
+═══════════════════════════════════════════════════════════ -->
+<div id="page-home" class="page active">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-particles" id="heroParticles"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Full-Service Advertising Agency
+      </div>
+
+      <h1 class="hero-title">
+        We Craft Stories<br/>That <span class="highlight">Inspire</span> &<br/>Drive Results
+      </h1>
+
+      <p class="hero-desc">
+        From bold brand identities to data-driven digital campaigns — Chaya Galaxy transforms your vision into powerful communication that connects, converts, and leaves a lasting impression.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#" class="btn btn-primary" onclick="showPage('agency')">
+          Explore Services →
+        </a>
+        <a href="#" class="btn btn-outline" onclick="showPage('portfolio')">
+          View Portfolio
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="number" data-target="200">0</div>
+          <div class="label">Projects Delivered</div>
+        </div>
+        <div class="hero-stat">
+          <div class="number" data-target="120">0</div>
+          <div class="label">Clients Served</div>
+        </div>
+        <div class="hero-stat">
+          <div class="number" data-target="15">0</div>
+          <div class="label">Years of Excellence</div>
+        </div>
+        <div class="hero-stat">
+          <div class="number" data-target="30">0</div>
+          <div class="label">Industry Awards</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-visual-inner" id="heroVisualInner">
+        <!-- Continuous Gold Ripple Waves -->
+        <div class="hero-ripple"></div>
+        <div class="hero-ripple"></div>
+        <div class="hero-ripple"></div>
+        <div class="hero-ripple"></div>
+
+        <!-- Rotating Circles -->
+        <div class="hero-circle"></div>
+        <div class="hero-circle"></div>
+        <div class="hero-circle"></div>
+        <div class="hero-center-box">
+          <div class="icon">✦</div>
+          <div class="text">Creative<br/>Excellence</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee Strip -->
+  <div class="about-strip">
+    <div class="strip-track" id="stripTrack">
+      <div class="strip-item"><span class="strip-dot"></span>Advertising</div>
+      <div class="strip-item"><span class="strip-dot"></span>Branding</div>
+      <div class="strip-item"><span class="strip-dot"></span>Media Buying</div>
+      <div class="strip-item"><span class="strip-dot"></span>Television</div>
+      <div class="strip-item"><span class="strip-dot"></span>Digital Marketing</div>
+      <div class="strip-item"><span class="strip-dot"></span>Public Relations</div>
+      <div class="strip-item"><span class="strip-dot"></span>Outdoor</div>
+      <div class="strip-item"><span class="strip-dot"></span>Corporate Events</div>
+      <div class="strip-item"><span class="strip-dot"></span>Market Research</div>
+      <div class="strip-item"><span class="strip-dot"></span>Rural Marketing</div>
+      <div class="strip-item"><span class="strip-dot"></span>Advertising</div>
+      <div class="strip-item"><span class="strip-dot"></span>Branding</div>
+      <div class="strip-item"><span class="strip-dot"></span>Media Buying</div>
+      <div class="strip-item"><span class="strip-dot"></span>Television</div>
+      <div class="strip-item"><span class="strip-dot"></span>Digital Marketing</div>
+      <div class="strip-item"><span class="strip-dot"></span>Public Relations</div>
+      <div class="strip-item"><span class="strip-dot"></span>Outdoor</div>
+      <div class="strip-item"><span class="strip-dot"></span>Corporate Events</div>
+      <div class="strip-item"><span class="strip-dot"></span>Market Research</div>
+      <div class="strip-item"><span class="strip-dot"></span>Rural Marketing</div>
+    </div>
+  </div>
+
+  <!-- Services Preview -->
+  <section class="services-preview section-pad">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Comprehensive Advertising Solutions</h2>
+        <div class="gold-line center"></div>
+        <p class="section-desc center">
+          We offer end-to-end advertising and marketing services designed to elevate your brand and maximize your reach across every channel.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal reveal-delay-1" onclick="showPage('agency')">
+          <div class="service-icon">🎯</div>
+          <div class="service-name">Advertising</div>
+          <p class="service-desc">Strategic campaigns across Print, TV, Radio, Digital, and Outdoor platforms tailored to your audience.</p>
+          <span class="service-link">Learn more →</span>
+        </div>
+        <div class="service-card reveal reveal-delay-2" onclick="showPage('agency')">
+          <div class="service-icon">💎</div>
+          <div class="service-name">Branding & Identity</div>
+          <p class="service-desc">Craft a compelling brand identity that resonates, differentiates, and builds lasting loyalty.</p>
+          <span class="service-link">Learn more →</span>
+        </div>
+        <div class="service-card reveal reveal-delay-3" onclick="showPage('agency')">
+          <div class="service-icon">📡</div>
+          <div class="service-name">Media Buying & Releases</div>
+          <p class="service-desc">Strategic media planning and buying to maximize your reach with precision and efficiency.</p>
+          <span class="service-link">Learn more →</span>
+        </div>
+        <div class="service-card reveal reveal-delay-1" onclick="showPage('agency')">
+          <div class="service-icon">📊</div>
+          <div class="service-name">Digital Marketing</div>
+          <p class="service-desc">Data-driven digital strategies including social media management, SEO, and performance marketing.</p>
+          <span class="service-link">Learn more →</span>
+        </div>
+        <div class="service-card reveal reveal-delay-2" onclick="showPage('agency')">
+          <div class="service-icon">🎨</div>
+          <div class="service-name">Designing & Printing</div>
+          <p class="service-desc">World-class creative design and premium printing solutions for all your brand materials.</p>
+          <span class="service-link">Learn more →</span>
+        </div>
+        <div class="service-card reveal reveal-delay-3" onclick="showPage('agency')">
+          <div class="service-icon">🎪</div>
+          <div class="service-name">Events & Public Relations</div>
+          <p class="service-desc">Flawless corporate events, impactful PR campaigns, and strategic press meet organization.</p>
+          <span class="service-link">Learn more →</span>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top:48px;">
+        <a href="#" class="btn btn-navy" onclick="showPage('agency')">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="why-us section-pad">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-content">
+          <span class="section-label">Why Choose Us</span>
+          <h2 class="section-title light">Your Brand, Our Passion</h2>
+          <div class="gold-line"></div>
+          <p class="section-desc">
+            With over 15 years of industry expertise, Chaya Galaxy combines creative brilliance with strategic thinking to deliver results that exceed expectations every time.
+          </p>
+
+          <div class="why-features">
+            <div class="why-feature reveal">
+              <div class="f-icon">🏆</div>
+              <div class="f-title">Award-Winning Work</div>
+              <div class="f-desc">30+ industry awards recognizing creative excellence and campaign effectiveness.</div>
+            </div>
+            <div class="why-feature reveal reveal-delay-1">
+              <div class="f-icon">🔬</div>
+              <div class="f-title">Research-Driven</div>
+              <div class="f-desc">Every campaign is backed by deep market insights and data analytics.</div>
+            </div>
+            <div class="why-feature reveal reveal-delay-2">
+              <div class="f-icon">🌐</div>
+              <div class="f-title">Pan-India Reach</div>
+              <div class="f-desc">Strong network covering urban and rural markets across all states.</div>
+            </div>
+            <div class="why-feature reveal reveal-delay-3">
+              <div class="f-icon">🤝</div>
+              <div class="f-title">Client-Centric</div>
+              <div class="f-desc">Dedicated account managers ensuring seamless execution and transparency.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-visual reveal">
+          <div class="why-big-stat">
+            <div class="big-num">15+</div>
+            <div class="big-label">Years of Industry Excellence</div>
+          </div>
+          <div class="why-small-stats">
+            <div class="why-small-stat">
+              <div class="s-num">200+</div>
+              <div class="s-label">Projects</div>
+            </div>
+            <div class="why-small-stat">
+              <div class="s-num">120+</div>
+              <div class="s-label">Clients</div>
+            </div>
+            <div class="why-small-stat">
+              <div class="s-num">30+</div>
+              <div class="s-label">Awards</div>
+            </div>
+            <div class="why-small-stat">
+              <div class="s-num">98%</div>
+              <div class="s-label">Retention Rate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients Preview — Interactive Infinite Marquee -->
+  <section class="clients-preview section-pad">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Trusted By</span>
+        <h2 class="section-title">Brands That Believe in Us</h2>
+        <div class="gold-line center"></div>
+        <p class="section-desc center">Hover to pause &nbsp;·&nbsp; Drag to scroll &nbsp;·&nbsp; Click a client to learn more</p>
+      </div>
+    </div>
+
+    <!-- Marquee wrapper (full-width, outside container) -->
+    <div class="clients-marquee-wrapper">
+
+      <!-- Fade edges -->
+      <div class="marquee-fade marquee-fade-left"></div>
+      <div class="marquee-fade marquee-fade-right"></div>
+
+      <!-- ROW 1 — scrolls LEFT -->
+      <div class="marquee-row" id="marqueeRow1" data-direction="left">
+        <div class="marquee-track" id="marqueeTrack1"></div>
+      </div>
+
+      <!-- ROW 2 — scrolls RIGHT -->
+      <div class="marquee-row" id="marqueeRow2" data-direction="right">
+        <div class="marquee-track" id="marqueeTrack2"></div>
+      </div>
+    </div>
+
+    <!-- Shared tooltip -->
+    <div class="client-tooltip" id="clientTooltip"></div>
+
+    <div class="container">
+      <div class="text-center" style="margin-top:48px;">
+        <a href="#" class="btn btn-navy" onclick="showPage('clients')">View All Clients</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials section-pad">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Testimonials</span>
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="gold-line center"></div>
+      </div>
+
+      <div class="testimonials-track">
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="stars">★★★★★</div>
+          <div class="quote-mark">"</div>
+          <p class="t-text">Chaya Galaxy transformed our brand identity completely. Their understanding of our market, combined with stunning creative execution, led to a 40% increase in brand recall.</p>
+          <div class="t-author">
+            <div class="t-avatar">RK</div>
+            <div class="t-info">
+              <div class="t-name">Rajesh Kumar</div>
+              <div class="t-role">CMO, Sunrise Industries</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="stars">★★★★★</div>
+          <div class="quote-mark">"</div>
+          <p class="t-text">The digital marketing campaign they executed for us broke all our previous records. Professional, creative, and truly results-oriented. Outstanding team!</p>
+          <div class="t-author">
+            <div class="t-avatar">PM</div>
+            <div class="t-info">
+              <div class="t-name">Priya Menon</div>
+              <div class="t-role">Director, VisionTech Solutions</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-3">
+          <div class="stars">★★★★★</div>
+          <div class="quote-mark">"</div>
+          <p class="t-text">From concept to execution, their rural marketing expertise is unmatched. They understood our ground-level requirements and delivered beyond expectations.</p>
+          <div class="t-author">
+            <div class="t-avatar">AS</div>
+            <div class="t-info">
+              <div class="t-name">Arjun Sharma</div>
+              <div class="t-role">MD, Agri-Harvest Corp</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2 class="cta-title">Ready to Amplify Your Brand?</h2>
+      <p class="cta-desc">Let's create something remarkable together. Get a free consultation with our experts today.</p>
+      <div class="cta-actions">
+        <a href="#" class="btn btn-navy" onclick="showPage('contact')">Start a Project</a>
+        <a href="#" class="btn btn-outline" style="border-color:var(--navy);color:var(--navy);" onclick="showPage('portfolio')">See Our Work</a>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page-home -->
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     PAGE: ADVERTISING AGENCY
+═══════════════════════════════════════════════════════════ -->
+<div id="page-agency" class="page">
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="page-hero-label">Our Services</div>
+      <h1 class="page-hero-title">Full-Service Advertising Agency</h1>
+      <p class="page-hero-desc">
+        From traditional advertising to cutting-edge digital solutions — we cover every touchpoint of your brand's journey with expertise and passion.
+      </p>
+      <div class="breadcrumb">
+        <a href="#" onclick="showPage('home')">Home</a>
+        <span>›</span>
+        <span>Advertising Agency</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advertising -->
+  <section class="services-detail section-pad" id="adv-advertising">
+    <div class="container">
+
+      <!-- Branding -->
+      <div class="services-category reveal">
+        <div class="category-header">
+          <div class="category-icon">💎</div>
+          <div>
+            <div class="category-title">Branding</div>
+            <div class="category-subtitle">Building identities that stand the test of time</div>
+          </div>
+        </div>
+        <div class="services-detail-grid">
+          <div class="service-detail-card">
+            <div class="sdc-icon">🏷️</div>
+            <div class="sdc-title">Brand Identity Design</div>
+            <p class="sdc-desc">Logo, typography, color systems, and visual language that make your brand instantly recognizable and memorable.</p>
+            <span class="sdc-tag">Strategic Branding</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">📖</div>
+            <div class="sdc-title">Brand Guidelines</div>
+            <p class="sdc-desc">Comprehensive brand manuals ensuring consistent application across all touchpoints and communications.</p>
+            <span class="sdc-tag">Brand Consistency</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">🔄</div>
+            <div class="sdc-title">Rebranding</div>
+            <p class="sdc-desc">Thoughtful brand evolution to refresh your image while retaining equity built over the years.</p>
+            <span class="sdc-tag">Brand Evolution</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Media Buying -->
+      <div class="services-category reveal">
+        <div class="category-header">
+          <div class="category-icon">📡</div>
+          <div>
+            <div class="category-title">Media Buying & Releases</div>
+            <div class="category-subtitle">Strategic placement for maximum impact</div>
+          </div>
+        </div>
+        <div class="services-detail-grid">
+          <div class="service-detail-card">
+            <div class="sdc-icon">📋</div>
+            <div class="sdc-title">Media Planning</div>
+            <p class="sdc-desc">Data-driven media plans that identify the right mix of channels, timing, and budget allocation to reach your audience.</p>
+            <span class="sdc-tag">Strategic Planning</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">🛒</div>
+            <div class="sdc-title">Media Buying</div>
+            <p class="sdc-desc">Negotiating and securing the best media slots across TV, radio, print, and digital at optimized rates.</p>
+            <span class="sdc-tag">Cost Optimization</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">📰</div>
+            <div class="sdc-title">Press Releases</div>
+            <p class="sdc-desc">Professional press release writing and distribution to key media outlets for maximum coverage and reach.</p>
+            <span class="sdc-tag">PR Distribution</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Multi-medium Advertising -->
+      <div class="services-category reveal">
+        <div class="category-header">
+          <div class="category-icon">🎯</div>
+          <div>
+            <div class="category-title">Advertising Across All Media</div>
+            <div class="category-subtitle">Reaching your audience wherever they are</div>
+          </div>
+        </div>
+        <div class="services-detail-grid">
+          <div class="service-detail-card">
+            <div class="sdc-icon">🖨️</div>
+            <div class="sdc-title">Print Advertising</div>
+            <p class="sdc-desc">Compelling newspaper, magazine, and brochure ads that capture attention in print media with strong visuals and messaging.</p>
+            <span class="sdc-tag">Print Media</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">📺</div>
+            <div class="sdc-title">Television</div>
+            <p class="sdc-desc">TV commercial production and placement across national and regional channels, maximizing audience engagement.</p>
+            <span class="sdc-tag">Broadcast Media</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">📻</div>
+            <div class="sdc-title">Radio</div>
+            <p class="sdc-desc">Creative radio spots and jingles that create powerful auditory brand experiences and drive local recall.</p>
+            <span class="sdc-tag">Audio Advertising</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">💻</div>
+            <div class="sdc-title">Digital Advertising</div>
+            <p class="sdc-desc">Precision-targeted online campaigns across Google, Meta, YouTube, and programmatic networks for measurable ROI.</p>
+            <span class="sdc-tag">Digital Channels</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">🏙️</div>
+            <div class="sdc-title">Outdoor (OOH)</div>
+            <p class="sdc-desc">Billboards, hoardings, transit ads, and DOOH placements at high-traffic locations for maximum brand visibility.</p>
+            <span class="sdc-tag">Out-of-Home</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Marketing Services -->
+  <section class="services-detail section-pad" id="adv-marketing" style="background:var(--off-white);">
+    <div class="container">
+
+      <div class="text-center reveal" style="margin-bottom:60px;">
+        <span class="section-label">Marketing</span>
+        <h2 class="section-title">Data-Driven Marketing</h2>
+        <div class="gold-line center"></div>
+        <p class="section-desc center">Research, strategy, and execution to grow your market presence effectively.</p>
+      </div>
+
+      <div class="services-category reveal">
+        <div class="category-header">
+          <div class="category-icon">🔬</div>
+          <div>
+            <div class="category-title">Market Research</div>
+            <div class="category-subtitle">Insights that power better decisions</div>
+          </div>
+        </div>
+        <div class="services-detail-grid">
+          <div class="service-detail-card">
+            <div class="sdc-icon">📈</div>
+            <div class="sdc-title">Consumer Research</div>
+            <p class="sdc-desc">In-depth studies on consumer behavior, preferences, and purchase drivers to inform campaign strategy.</p>
+            <span class="sdc-tag">Consumer Insights</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">🏆</div>
+            <div class="sdc-title">Competitive Analysis</div>
+            <p class="sdc-desc">Thorough analysis of competitor positioning, messaging, and market share to identify opportunities.</p>
+            <span class="sdc-tag">Market Intelligence</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">🗺️</div>
+            <div class="sdc-title">Market Mapping</div>
+            <p class="sdc-desc">Comprehensive market segmentation and territory mapping for precise targeting and planning.</p>
+            <span class="sdc-tag">Segmentation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="services-category reveal">
+        <div class="category-header">
+          <div class="category-icon">🌾</div>
+          <div>
+            <div class="category-title">Rural Marketing</div>
+            <div class="category-subtitle">Reaching the heart of Bharat</div>
+          </div>
+        </div>
+        <div class="services-detail-grid">
+          <div class="service-detail-card">
+            <div class="sdc-icon">🏘️</div>
+            <div class="sdc-title">Village-Level Activation</div>
+            <p class="sdc-desc">Ground-level BTL activities, haats, mandis, and village fairs to create powerful brand experiences in rural markets.</p>
+            <span class="sdc-tag">Rural BTL</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">🚐</div>
+            <div class="sdc-title">Mobile Van Campaigns</div>
+            <p class="sdc-desc">Branded vehicle campaigns covering remote areas with product demos, sampling, and interactive engagement.</p>
+            <span class="sdc-tag">Mobile Marketing</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">🎭</div>
+            <div class="sdc-title">Folk Media & Street Plays</div>
+            <p class="sdc-desc">Culturally resonant folk art forms, puppet shows, and street plays to communicate brand messages effectively.</p>
+            <span class="sdc-tag">Cultural Connect</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="services-category reveal">
+        <div class="category-header">
+          <div class="category-icon">📱</div>
+          <div>
+            <div class="category-title">Digital Marketing</div>
+            <div class="category-subtitle">Amplify your presence in the digital world</div>
+          </div>
+        </div>
+        <div class="services-detail-grid">
+          <div class="service-detail-card">
+            <div class="sdc-icon">📲</div>
+            <div class="sdc-title">Social Media Management</div>
+            <p class="sdc-desc">Complete management of Instagram, Facebook, LinkedIn, Twitter, and YouTube — strategy, content, community, and ads.</p>
+            <span class="sdc-tag">Social Media</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">🔍</div>
+            <div class="sdc-title">SEO & SEM</div>
+            <p class="sdc-desc">Organic search optimization and paid search campaigns to drive qualified traffic and improve digital visibility.</p>
+            <span class="sdc-tag">Search Marketing</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">✉️</div>
+            <div class="sdc-title">Email & WhatsApp Marketing</div>
+            <p class="sdc-desc">Personalized email campaigns and WhatsApp marketing for direct customer engagement and retention.</p>
+            <span class="sdc-tag">Direct Marketing</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">🎬</div>
+            <div class="sdc-title">Video & Content Marketing</div>
+            <p class="sdc-desc">Engaging video production, blog content, infographics, and storytelling that builds authority and trust.</p>
+            <span class="sdc-tag">Content Creation</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Creative & PR Services -->
+  <section class="services-detail section-pad" id="adv-creative">
+    <div class="container">
+
+      <div class="text-center reveal" style="margin-bottom:60px;">
+        <span class="section-label">Creative Studio</span>
+        <h2 class="section-title">Design, Print & Translation</h2>
+        <div class="gold-line center"></div>
+      </div>
+
+      <div class="services-category reveal">
+        <div class="category-header">
+          <div class="category-icon">🎨</div>
+          <div>
+            <div class="category-title">Designing</div>
+            <div class="category-subtitle">Creativity that communicates</div>
+          </div>
+        </div>
+        <div class="services-detail-grid">
+          <div class="service-detail-card">
+            <div class="sdc-icon">🖼️</div>
+            <div class="sdc-title">Graphic Design</div>
+            <p class="sdc-desc">Brochures, flyers, banners, standees, and all print collaterals designed with strategic creativity.</p>
+            <span class="sdc-tag">Print Design</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">🌐</div>
+            <div class="sdc-title">Digital Design</div>
+            <p class="sdc-desc">Social media creatives, website UI, email templates, and digital ads crafted for conversion.</p>
+            <span class="sdc-tag">Digital Design</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">🎞️</div>
+            <div class="sdc-title">Motion Graphics</div>
+            <p class="sdc-desc">Animated explainers, logo animations, and motion content that bring your brand to life on screen.</p>
+            <span class="sdc-tag">Animation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="services-category reveal">
+        <div class="category-header">
+          <div class="category-icon">🖨️</div>
+          <div>
+            <div class="category-title">Printing</div>
+            <div class="category-subtitle">Premium quality print solutions</div>
+          </div>
+        </div>
+        <div class="services-detail-grid">
+          <div class="service-detail-card">
+            <div class="sdc-icon">📄</div>
+            <div class="sdc-title">Offset Printing</div>
+            <p class="sdc-desc">High-volume, high-quality offset printing for brochures, catalogues, annual reports, and marketing materials.</p>
+            <span class="sdc-tag">Offset Print</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">🖼️</div>
+            <div class="sdc-title">Large Format Printing</div>
+            <p class="sdc-desc">Banners, hoardings, flex boards, canvas prints, and trade show displays at premium quality.</p>
+            <span class="sdc-tag">Large Format</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">🎁</div>
+            <div class="sdc-title">Packaging & Specialty Print</div>
+            <p class="sdc-desc">Custom packaging design and specialty printing including embossing, foiling, and UV finishes.</p>
+            <span class="sdc-tag">Specialty Print</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="services-category reveal">
+        <div class="category-header">
+          <div class="category-icon">🌍</div>
+          <div>
+            <div class="category-title">Copy, Translation & Nativity Check</div>
+            <div class="category-subtitle">Authentic communication in every language</div>
+          </div>
+        </div>
+        <div class="services-detail-grid">
+          <div class="service-detail-card">
+            <div class="sdc-icon">✍️</div>
+            <div class="sdc-title">Copy Translation</div>
+            <p class="sdc-desc">Professional translation of advertising copy, scripts, and brand content across 12+ Indian languages maintaining tone and intent.</p>
+            <span class="sdc-tag">Multi-Language</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">✅</div>
+            <div class="sdc-title">Nativity Check</div>
+            <p class="sdc-desc">Cultural authenticity review by native language experts to ensure messaging resonates genuinely with regional audiences.</p>
+            <span class="sdc-tag">Cultural Review</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">📝</div>
+            <div class="sdc-title">Copywriting</div>
+            <p class="sdc-desc">Persuasive, brand-aligned copywriting for ads, websites, brochures, and campaigns that inspire action.</p>
+            <span class="sdc-tag">Creative Copy</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Events & PR -->
+  <section class="services-detail section-pad" id="adv-events" style="background:var(--off-white);">
+    <div class="container">
+
+      <div class="text-center reveal" style="margin-bottom:60px;">
+        <span class="section-label">Events & PR</span>
+        <h2 class="section-title">Creating Memorable Experiences</h2>
+        <div class="gold-line center"></div>
+      </div>
+
+      <div class="services-category reveal">
+        <div class="category-header">
+          <div class="category-icon">🎪</div>
+          <div>
+            <div class="category-title">Corporate Events</div>
+            <div class="category-subtitle">Events that leave an impression</div>
+          </div>
+        </div>
+        <div class="services-detail-grid">
+          <div class="service-detail-card">
+            <div class="sdc-icon">🏢</div>
+            <div class="sdc-title">Product Launches</div>
+            <p class="sdc-desc">Spectacular product launch events with curated experiences, media coverage, and audience engagement strategies.</p>
+            <span class="sdc-tag">Brand Launch</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">🎖️</div>
+            <div class="sdc-title">Award Ceremonies</div>
+            <p class="sdc-desc">End-to-end management of award events, dealer meets, and recognition programs with seamless execution.</p>
+            <span class="sdc-tag">Ceremonies</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">🤝</div>
+            <div class="sdc-title">Conferences & Summits</div>
+            <p class="sdc-desc">Comprehensive event management for corporate conferences, trade summits, and industry gatherings.</p>
+            <span class="sdc-tag">B2B Events</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">🎊</div>
+            <div class="sdc-title">Dealer & Channel Events</div>
+            <p class="sdc-desc">Engaging dealer meets, channel partner conventions, and distribution network events with full coordination.</p>
+            <span class="sdc-tag">Trade Events</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="services-category reveal">
+        <div class="category-header">
+          <div class="category-icon">📣</div>
+          <div>
+            <div class="category-title">Public Relations & Press Meet</div>
+            <div class="category-subtitle">Building your reputation, amplifying your story</div>
+          </div>
+        </div>
+        <div class="services-detail-grid">
+          <div class="service-detail-card">
+            <div class="sdc-icon">🗞️</div>
+            <div class="sdc-title">Public Relations</div>
+            <p class="sdc-desc">Strategic PR planning to build, manage, and protect your brand reputation through earned media and thought leadership.</p>
+            <span class="sdc-tag">Brand PR</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">🎤</div>
+            <div class="sdc-title">Press Meet Organization</div>
+            <p class="sdc-desc">Complete press conference planning and execution — venue, media invitations, briefing kits, and follow-up coverage.</p>
+            <span class="sdc-tag">Media Relations</span>
+          </div>
+          <div class="service-detail-card">
+            <div class="sdc-icon">🛡️</div>
+            <div class="sdc-title">Crisis Management</div>
+            <p class="sdc-desc">Rapid response PR strategy and media management during brand crises to protect and restore reputation.</p>
+            <span class="sdc-tag">Crisis PR</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2 class="cta-title">Ready to Work Together?</h2>
+      <p class="cta-desc">Tell us about your project and let's create something extraordinary.</p>
+      <div class="cta-actions">
+        <a href="#" class="btn btn-navy" onclick="showPage('contact')">Get a Free Quote</a>
+        <a href="#" class="btn btn-outline" style="border-color:var(--navy);color:var(--navy);" onclick="showPage('portfolio')">View Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page-agency -->
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     PAGE: CLIENTS
+═══════════════════════════════════════════════════════════ -->
+<div id="page-clients" class="page">
+
+  <section class="page-hero">
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="page-hero-label">Our Clients</div>
+      <h1 class="page-hero-title">Brands We're Proud to Work With</h1>
+      <p class="page-hero-desc">
+        We've had the privilege of partnering with some of India's most respected brands across diverse industries. Each relationship is built on trust, results, and shared vision.
+      </p>
+      <div class="breadcrumb">
+        <a href="#" onclick="showPage('home')">Home</a>
+        <span>›</span>
+        <span>Clients</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <div class="clients-stats-bar">
+    <div class="container">
+      <div class="clients-stats-row">
+        <div class="cs-stat">
+          <div class="cs-num">120+</div>
+          <div class="cs-label">Clients Served</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-num">15+</div>
+          <div class="cs-label">Industries</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-num">98%</div>
+          <div class="cs-label">Retention Rate</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-num">200+</div>
+          <div class="cs-label">Projects Completed</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Client Grid -->
+  <section class="clients-page section-pad">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Our Clients</span>
+        <h2 class="section-title">Industry Leaders Trust Chaya Galaxy</h2>
+        <div class="gold-line center"></div>
+        <p class="section-desc center">A diverse portfolio of clients from FMCG, healthcare, technology, infrastructure, and more.</p>
+      </div>
+
+      <div class="clients-page-grid">
+        <div class="client-card reveal"><div class="client-initials">HG</div><div class="client-name">Hinduja Group</div><div class="client-industry">Conglomerate</div></div>
+        <div class="client-card reveal reveal-delay-1"><div class="client-initials">SP</div><div class="client-name">Sun Pharma</div><div class="client-industry">Pharmaceuticals</div></div>
+        <div class="client-card reveal reveal-delay-2"><div class="client-initials">MH</div><div class="client-name">Mahindra & Mahindra</div><div class="client-industry">Automotive</div></div>
+        <div class="client-card reveal reveal-delay-3"><div class="client-initials">BN</div><div class="client-name">BSNL</div><div class="client-industry">Telecommunications</div></div>
+        <div class="client-card reveal"><div class="client-initials">TV</div><div class="client-name">TVS Motors</div><div class="client-industry">Automotive</div></div>
+        <div class="client-card reveal reveal-delay-1"><div class="client-initials">PG</div><div class="client-name">Piramal Group</div><div class="client-industry">Healthcare</div></div>
+        <div class="client-card reveal reveal-delay-2"><div class="client-initials">AH</div><div class="client-name">Apollo Hospitals</div><div class="client-industry">Healthcare</div></div>
+        <div class="client-card reveal reveal-delay-3"><div class="client-initials">TP</div><div class="client-name">Tata Projects</div><div class="client-industry">Infrastructure</div></div>
+        <div class="client-card reveal"><div class="client-initials">RR</div><div class="client-name">Reliance Retail</div><div class="client-industry">Retail</div></div>
+        <div class="client-card reveal reveal-delay-1"><div class="client-initials">SF</div><div class="client-name">Sify Technologies</div><div class="client-industry">Technology</div></div>
+        <div class="client-card reveal reveal-delay-2"><div class="client-initials">IB</div><div class="client-name">IDBI Bank</div><div class="client-industry">Banking & Finance</div></div>
+        <div class="client-card reveal reveal-delay-3"><div class="client-initials">NF</div><div class="client-name">Nandini Foods</div><div class="client-industry">FMCG</div></div>
+        <div class="client-card reveal"><div class="client-initials">SK</div><div class="client-name">Saravana Stores</div><div class="client-industry">Retail</div></div>
+        <div class="client-card reveal reveal-delay-1"><div class="client-initials">CL</div><div class="client-name">Ceat Tyres</div><div class="client-industry">Manufacturing</div></div>
+        <div class="client-card reveal reveal-delay-2"><div class="client-initials">VG</div><div class="client-name">VGN Group</div><div class="client-industry">Real Estate</div></div>
+        <div class="client-card reveal reveal-delay-3"><div class="client-initials">BJ</div><div class="client-name">Bajaj Finance</div><div class="client-industry">Financial Services</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials on Clients Page -->
+  <section class="testimonials section-pad" style="background:var(--white);">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Client Voices</span>
+        <h2 class="section-title">What They Say About Us</h2>
+        <div class="gold-line center"></div>
+      </div>
+      <div class="testimonials-track">
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="stars">★★★★★</div>
+          <div class="quote-mark">"</div>
+          <p class="t-text">The outdoor campaign they executed for our new product launch was exceptional. Pan-India hoarding management with zero delays — truly professional.</p>
+          <div class="t-author">
+            <div class="t-avatar">VN</div>
+            <div class="t-info"><div class="t-name">Venkat Narayanan</div><div class="t-role">Marketing Head, TVS Motors</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="stars">★★★★★</div>
+          <div class="quote-mark">"</div>
+          <p class="t-text">Their rural marketing expertise helped us penetrate markets we thought were impossible. The local activations were creative, culturally sensitive, and highly effective.</p>
+          <div class="t-author">
+            <div class="t-avatar">MD</div>
+            <div class="t-info"><div class="t-name">Meena Devi</div><div class="t-role">Brand Manager, Nandini Foods</div></div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-3">
+          <div class="stars">★★★★★</div>
+          <div class="quote-mark">"</div>
+          <p class="t-text">Our social media presence went from zero to 500K followers in 8 months with Chaya Galaxy. The content strategy and execution were world-class.</p>
+          <div class="t-author">
+            <div class="t-avatar">SK</div>
+            <div class="t-info"><div class="t-name">Siddharth Kumar</div><div class="t-role">CEO, TechVenture India</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2 class="cta-title">Join Our Growing Client Family</h2>
+      <p class="cta-desc">Let's discuss how we can help your brand reach new heights.</p>
+      <div class="cta-actions">
+        <a href="#" class="btn btn-navy" onclick="showPage('contact')">Contact Us Today</a>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page-clients -->
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     PAGE: PORTFOLIO
+═══════════════════════════════════════════════════════════ -->
+<div id="page-portfolio" class="page">
+
+  <section class="page-hero">
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="page-hero-label">Our Portfolio</div>
+      <h1 class="page-hero-title">Work That Speaks for Itself</h1>
+      <p class="page-hero-desc">A curated showcase of campaigns, brand identities, and creative work that has delivered real business results for our clients.</p>
+      <div class="breadcrumb">
+        <a href="#" onclick="showPage('home')">Home</a>
+        <span>›</span>
+        <span>Portfolio</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad" style="background:var(--off-white);">
+    <div class="container">
+      <!-- Filters -->
+      <div class="portfolio-filters">
+        <button class="filter-btn active" onclick="filterPortfolio('all', this)">All Work</button>
+        <button class="filter-btn" onclick="filterPortfolio('branding', this)">Branding</button>
+        <button class="filter-btn" onclick="filterPortfolio('digital', this)">Digital</button>
+        <button class="filter-btn" onclick="filterPortfolio('print', this)">Print</button>
+        <button class="filter-btn" onclick="filterPortfolio('outdoor', this)">Outdoor</button>
+        <button class="filter-btn" onclick="filterPortfolio('events', this)">Events</button>
+        <button class="filter-btn" onclick="filterPortfolio('tv', this)">Television</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="portfolio-grid" id="portfolioGrid">
+        <div class="portfolio-item" data-cat="branding">
+          <div class="portfolio-bg" style="background:linear-gradient(135deg,#1a2f50,#0a1628);">💎</div>
+          <div class="portfolio-overlay">
+            <div class="pi-category">Branding</div>
+            <div class="pi-title">Stellar Brand Identity</div>
+            <div class="pi-client">Sunrise Industries</div>
+            <span class="pi-tag">Brand Design</span>
+          </div>
+        </div>
+        <div class="portfolio-item" data-cat="digital">
+          <div class="portfolio-bg" style="background:linear-gradient(135deg,#0d3b6e,#1a5276);">📱</div>
+          <div class="portfolio-overlay">
+            <div class="pi-category">Digital Marketing</div>
+            <div class="pi-title">Social Media Campaign</div>
+            <div class="pi-client">VisionTech Solutions</div>
+            <span class="pi-tag">500K+ Reach</span>
+          </div>
+        </div>
+        <div class="portfolio-item" data-cat="tv">
+          <div class="portfolio-bg" style="background:linear-gradient(135deg,#1b1464,#2980b9);">📺</div>
+          <div class="portfolio-overlay">
+            <div class="pi-category">Television</div>
+            <div class="pi-title">Festive TVC Campaign</div>
+            <div class="pi-client">Mahindra</div>
+            <span class="pi-tag">National Campaign</span>
+          </div>
+        </div>
+        <div class="portfolio-item" data-cat="outdoor">
+          <div class="portfolio-bg" style="background:linear-gradient(135deg,#784212,#a04000);">🏙️</div>
+          <div class="portfolio-overlay">
+            <div class="pi-category">Outdoor OOH</div>
+            <div class="pi-title">City-Wide Billboard Campaign</div>
+            <div class="pi-client">Apollo Hospitals</div>
+            <span class="pi-tag">200+ Hoardings</span>
+          </div>
+        </div>
+        <div class="portfolio-item" data-cat="print">
+          <div class="portfolio-bg" style="background:linear-gradient(135deg,#1a5276,#2e86c1);">🖨️</div>
+          <div class="portfolio-overlay">
+            <div class="pi-category">Print Advertising</div>
+            <div class="pi-title">Full-Page Newspaper Ads</div>
+            <div class="pi-client">Bajaj Finance</div>
+            <span class="pi-tag">National Press</span>
+          </div>
+        </div>
+        <div class="portfolio-item" data-cat="events">
+          <div class="portfolio-bg" style="background:linear-gradient(135deg,#117864,#1e8449);">🎪</div>
+          <div class="portfolio-overlay">
+            <div class="pi-category">Corporate Event</div>
+            <div class="pi-title">Annual Leadership Summit</div>
+            <div class="pi-client">Tata Projects</div>
+            <span class="pi-tag">1200 Attendees</span>
+          </div>
+        </div>
+        <div class="portfolio-item" data-cat="branding">
+          <div class="portfolio-bg" style="background:linear-gradient(135deg,#4a235a,#6c3483);">✨</div>
+          <div class="portfolio-overlay">
+            <div class="pi-category">Rebranding</div>
+            <div class="pi-title">Complete Brand Overhaul</div>
+            <div class="pi-client">Piramal Group</div>
+            <span class="pi-tag">Brand Refresh</span>
+          </div>
+        </div>
+        <div class="portfolio-item" data-cat="digital">
+          <div class="portfolio-bg" style="background:linear-gradient(135deg,#1a3a4a,#2e6d8f);">🎯</div>
+          <div class="portfolio-overlay">
+            <div class="pi-category">Digital Campaign</div>
+            <div class="pi-title">Performance Marketing Drive</div>
+            <div class="pi-client">IDBI Bank</div>
+            <span class="pi-tag">4x ROI</span>
+          </div>
+        </div>
+        <div class="portfolio-item" data-cat="outdoor">
+          <div class="portfolio-bg" style="background:linear-gradient(135deg,#212f3d,#34495e);">🚂</div>
+          <div class="portfolio-overlay">
+            <div class="pi-category">Transit Advertising</div>
+            <div class="pi-title">Metro & Bus Branding</div>
+            <div class="pi-client">BSNL</div>
+            <span class="pi-tag">Transit OOH</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2 class="cta-title">Let's Create Your Success Story</h2>
+      <p class="cta-desc">Ready to be part of our portfolio? Let's make something great together.</p>
+      <div class="cta-actions">
+        <a href="#" class="btn btn-navy" onclick="showPage('contact')">Start Your Project</a>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page-portfolio -->
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     PAGE: CAREERS
+═══════════════════════════════════════════════════════════ -->
+<div id="page-careers" class="page">
+
+  <section class="page-hero">
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="page-hero-label">Join Our Team</div>
+      <h1 class="page-hero-title">Build Your Career at Chaya Galaxy</h1>
+      <p class="page-hero-desc">We're always looking for passionate, creative, and driven individuals who want to make a real impact in the advertising world.</p>
+      <div class="breadcrumb">
+        <a href="#" onclick="showPage('home')">Home</a>
+        <span>›</span>
+        <span>Careers</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Perks -->
+  <section class="careers-intro section-pad">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Why Join Us</span>
+        <h2 class="section-title">More Than Just a Job</h2>
+        <div class="gold-line center"></div>
+        <p class="section-desc center">At Chaya Galaxy, we cultivate an environment where creativity thrives, ideas are celebrated, and careers flourish.</p>
+      </div>
+
+      <div class="careers-perks">
+        <div class="perk-card reveal reveal-delay-1">
+          <div class="perk-icon">🚀</div>
+          <div class="perk-title">Rapid Growth</div>
+          <div class="perk-desc">Clear career progression paths with mentorship from industry veterans and leaders.</div>
+        </div>
+        <div class="perk-card reveal reveal-delay-2">
+          <div class="perk-icon">💡</div>
+          <div class="perk-title">Creative Freedom</div>
+          <div class="perk-desc">An open culture where every idea matters. Your voice is heard and valued at every level.</div>
+        </div>
+        <div class="perk-card reveal reveal-delay-3">
+          <div class="perk-icon">🌟</div>
+          <div class="perk-title">Award-Winning Projects</div>
+          <div class="perk-desc">Work on campaigns for top brands that win national and international recognition.</div>
+        </div>
+        <div class="perk-card reveal reveal-delay-4">
+          <div class="perk-icon">🏥</div>
+          <div class="perk-title">Great Benefits</div>
+          <div class="perk-desc">Competitive salaries, health insurance, flexible working arrangements, and learning budgets.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Job Listings -->
+  <section class="jobs-section section-pad" style="background:var(--off-white);">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Open Positions</span>
+        <h2 class="section-title">Current Openings</h2>
+        <div class="gold-line center"></div>
+        <p class="section-desc center">Find the role that matches your passion and skill set. We hire for attitude and train for skill.</p>
+      </div>
+
+      <div class="job-listings">
+        <div class="job-card reveal">
+          <div class="job-info">
+            <div class="job-dept">Creative</div>
+            <div class="job-title">Senior Graphic Designer</div>
+            <div class="job-meta">
+              <span class="job-tag">📍 Chennai</span>
+              <span class="job-tag">⏱ Full-Time</span>
+              <span class="job-tag">⭐ 4+ Years</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary" onclick="showPage('contact')">Apply Now</a>
+        </div>
+        <div class="job-card reveal">
+          <div class="job-info">
+            <div class="job-dept">Digital Marketing</div>
+            <div class="job-title">Digital Marketing Manager</div>
+            <div class="job-meta">
+              <span class="job-tag">📍 Chennai</span>
+              <span class="job-tag">⏱ Full-Time</span>
+              <span class="job-tag">⭐ 5+ Years</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary" onclick="showPage('contact')">Apply Now</a>
+        </div>
+        <div class="job-card reveal">
+          <div class="job-info">
+            <div class="job-dept">Client Servicing</div>
+            <div class="job-title">Account Manager</div>
+            <div class="job-meta">
+              <span class="job-tag">📍 Chennai / Mumbai</span>
+              <span class="job-tag">⏱ Full-Time</span>
+              <span class="job-tag">⭐ 3+ Years</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary" onclick="showPage('contact')">Apply Now</a>
+        </div>
+        <div class="job-card reveal">
+          <div class="job-info">
+            <div class="job-dept">Content</div>
+            <div class="job-title">Copywriter (Bilingual – English & Tamil)</div>
+            <div class="job-meta">
+              <span class="job-tag">📍 Chennai</span>
+              <span class="job-tag">⏱ Full-Time</span>
+              <span class="job-tag">⭐ 2+ Years</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary" onclick="showPage('contact')">Apply Now</a>
+        </div>
+        <div class="job-card reveal">
+          <div class="job-info">
+            <div class="job-dept">Events</div>
+            <div class="job-title">Event Coordinator</div>
+            <div class="job-meta">
+              <span class="job-tag">📍 Pan India</span>
+              <span class="job-tag">⏱ Full-Time</span>
+              <span class="job-tag">⭐ 2+ Years</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary" onclick="showPage('contact')">Apply Now</a>
+        </div>
+        <div class="job-card reveal">
+          <div class="job-info">
+            <div class="job-dept">Media</div>
+            <div class="job-title">Media Planner & Buyer</div>
+            <div class="job-meta">
+              <span class="job-tag">📍 Chennai</span>
+              <span class="job-tag">⏱ Full-Time</span>
+              <span class="job-tag">⭐ 4+ Years</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary" onclick="showPage('contact')">Apply Now</a>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top:48px;">
+        <p style="color:var(--gray);margin-bottom:20px;">Don't see a role that fits? Send us your portfolio anyway!</p>
+        <a href="#" class="btn btn-navy" onclick="showPage('contact')">Send Open Application</a>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page-careers -->
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     PAGE: CONTACT
+═══════════════════════════════════════════════════════════ -->
+<div id="page-contact" class="page">
+
+  <section class="page-hero">
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="page-hero-label">Get In Touch</div>
+      <h1 class="page-hero-title">Let's Start a Conversation</h1>
+      <p class="page-hero-desc">Have a project in mind? We'd love to hear about it. Get in touch with our team and let's make something great together.</p>
+      <div class="breadcrumb">
+        <a href="#" onclick="showPage('home')">Home</a>
+        <span>›</span>
+        <span>Contact</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-page section-pad">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Info Card -->
+        <div class="contact-info">
+          <div class="contact-info-card">
+            <span class="section-label">Contact Us</span>
+            <h2 class="section-title light" style="font-size:1.8rem;">We're Here to Help</h2>
+            <p class="section-desc" style="color:rgba(255,255,255,.55);margin-bottom:40px;">
+              Reach out to us for project discussions, quotes, or any enquiries. We typically respond within 24 hours.
+            </p>
+
+            <div class="ci-item">
+              <div class="ci-icon-box">📍</div>
+              <div>
+                <div class="ci-label">Office Address</div>
+                <div class="ci-value">Chaya Galaxy, No. 45, Anna Salai,<br/>Teynampet, Chennai – 600 018,<br/>Tamil Nadu, India</div>
+              </div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-icon-box">📞</div>
+              <div>
+                <div class="ci-label">Phone</div>
+                <div class="ci-value">+91 44 4567 8900<br/>+91 98765 43210</div>
+              </div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-icon-box">✉️</div>
+              <div>
+                <div class="ci-label">Email</div>
+                <div class="ci-value">hello@chayagalaxy.com<br/>careers@chayagalaxy.com</div>
+              </div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-icon-box">🕐</div>
+              <div>
+                <div class="ci-label">Working Hours</div>
+                <div class="ci-value">Mon – Sat: 9:00 AM – 6:30 PM<br/>Sunday: Closed</div>
+              </div>
+            </div>
+
+            <div class="footer-social" style="margin-top:40px;">
+              <div class="social-btn" title="LinkedIn">in</div>
+              <div class="social-btn" title="Instagram">📸</div>
+              <div class="social-btn" title="Facebook">f</div>
+              <div class="social-btn" title="Twitter/X">𝕏</div>
+              <div class="social-btn" title="YouTube">▶</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap">
+          <div id="contactForm">
+            <div class="form-title">Send Us a Message</div>
+            <div class="form-sub">Fill in the details below and our team will reach out to you promptly.</div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name *</label>
+                <input type="text" placeholder="John" id="fname" />
+              </div>
+              <div class="form-group">
+                <label>Last Name *</label>
+                <input type="text" placeholder="Doe" id="lname" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Email Address *</label>
+                <input type="email" placeholder="john@company.com" id="email" />
+              </div>
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="+91 98765 43210" id="phone" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Company / Organisation</label>
+              <input type="text" placeholder="Your company name" id="company" />
+            </div>
+            <div class="form-group">
+              <label>Service of Interest *</label>
+              <select id="service">
+                <option value="" disabled selected>Select a service</option>
+                <option>Advertising (Print / TV / Radio / Digital / Outdoor)</option>
+                <option>Branding & Identity</option>
+                <option>Media Buying & Releases</option>
+                <option>Digital Marketing & Social Media</option>
+                <option>Market Research</option>
+                <option>Rural Marketing</option>
+                <option>Designing & Printing</option>
+                <option>Copy Translation & Nativity Check</option>
+                <option>Corporate Events</option>
+                <option>Public Relations & Press Meet</option>
+                <option>Careers / Job Application</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Your Message *</label>
+              <textarea id="message" placeholder="Tell us about your project, goals, timeline, and any other relevant details..."></textarea>
+            </div>
+            <button class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;" onclick="submitForm()">
+              Send Message →
+            </button>
+          </div>
+
+          <div class="form-success" id="formSuccess">
+            <div class="success-icon">✅</div>
+            <div class="success-title">Message Sent Successfully!</div>
+            <p class="success-msg">Thank you for reaching out to Chaya Galaxy. Our team will get back to you within 24 business hours.</p>
+            <a href="#" class="btn btn-navy" style="margin-top:24px;" onclick="resetForm()">Send Another Message</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <div class="map-section">
+    <div class="map-placeholder">
+      <div class="map-icon">📍</div>
+      <div class="map-text">Chaya Galaxy – Chennai, Tamil Nadu</div>
+      <div class="map-addr">No. 45, Anna Salai, Teynampet, Chennai – 600 018, Tamil Nadu, India</div>
+    </div>
+  </div>
+
+</div><!-- /page-contact -->
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER (shown on all pages)
+═══════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo" onclick="showPage('home')">
+          <div class="logo-icon">CG</div>
+          <div class="logo-text">
+            <span class="logo-name">Chaya Galaxy</span>
+            <span class="logo-sub">Advertising Agency</span>
+          </div>
+        </a>
+        <p class="brand-desc">
+          A full-service advertising agency crafting powerful brand stories, driving measurable results, and building lasting connections since 2009.
+        </p>
+        <div class="footer-social">
+          <div class="social-btn">in</div>
+          <div class="social-btn">📸</div>
+          <div class="social-btn">f</div>
+          <div class="social-btn">𝕏</div>
+          <div class="social-btn">▶</div>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#" onclick="showPage('agency')">Advertising</a></li>
+          <li><a href="#" onclick="showPage('agency')">Branding</a></li>
+          <li><a href="#" onclick="showPage('agency')">Media Buying</a></li>
+          <li><a href="#" onclick="showPage('agency')">Digital Marketing</a></li>
+          <li><a href="#" onclick="showPage('agency')">Rural Marketing</a></li>
+          <li><a href="#" onclick="showPage('agency')">Market Research</a></li>
+          <li><a href="#" onclick="showPage('agency')">Public Relations</a></li>
+          <li><a href="#" onclick="showPage('agency')">Corporate Events</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#" onclick="showPage('home')">Home</a></li>
+          <li><a href="#" onclick="showPage('agency')">Advertising Agency</a></li>
+          <li><a href="#" onclick="showPage('clients')">Clients</a></li>
+          <li><a href="#" onclick="showPage('portfolio')">Portfolio</a></li>
+          <li><a href="#" onclick="showPage('careers')">Careers</a></li>
+          <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <span class="ci-icon">📍</span>
+          <span>No. 45, Anna Salai, Teynampet, Chennai – 600 018</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="ci-icon">📞</span>
+          <span>+91 44 4567 8900</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="ci-icon">✉️</span>
+          <span>hello@chayagalaxy.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="ci-icon">🕐</span>
+          <span>Mon–Sat: 9 AM – 6:30 PM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 Chaya Galaxy. All rights reserved.</span>
+      <span>Crafted with ✦ in Chennai, India</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
